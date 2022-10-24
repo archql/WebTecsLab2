@@ -12,7 +12,6 @@ import java.util.*;
  * class that holds hashmap of all devices
  * property <b>catalogue</b> is a hashmap with all devices
  * property <b>dataFilePath</b> path to a xml file where hashmap is stored
- * @autor archql
  * @version 1.0
  */
 public class Catalogue implements IDatabase {
@@ -82,7 +81,8 @@ public class Catalogue implements IDatabase {
     /**
      * loads DB from dataFilePath file
      */
-    private void load()
+    @Override
+    public void load()
     {
         try
         {
@@ -99,7 +99,8 @@ public class Catalogue implements IDatabase {
     /**
      * saves DB to dataFilePath file
      */
-    private void save()
+    @Override
+    public void save()
     {
         try
         {
@@ -111,5 +112,10 @@ public class Catalogue implements IDatabase {
         {
             System.err.println("ERR: flushing: " + e.getMessage());
         }
+    }
+
+    @Override
+    public void clear() {
+        catalogue.clear();
     }
 }

@@ -10,7 +10,6 @@ import java.util.Objects;
  * property <b>article</b> refers to a unique code assigned to the item by manufacturer
  * property <b>isOnStall</b> reflects if object is currently can be bought
  * property <b>price</b> refers to its type
- * @autor archql
  * @version 1.0
  */
 public class Device {

@@ -15,6 +15,7 @@ public class Main {
     private static void init()
     {
         db = (IDatabase) new Catalogue("data.xml");
+        db.load();
 
         doByClass = new HashMap<>();
         doByClass.put(Integer.TYPE, () -> { int a = sc.nextInt(); sc.nextLine(); return a; });
@@ -35,7 +36,8 @@ public class Main {
             System.out.println("2 for showing all devices");
             System.out.println("3 for searching all kettles");
             System.out.println("4 for searching the cheapest");
-            System.out.println("5 for exit");
+            System.out.println("5 for clear all devices");
+            System.out.println("6 for exit");
             System.out.println();
 
             System.out.print("> ");
@@ -47,7 +49,8 @@ public class Main {
                 case 2: showItems(); break;
                 case 3: searchType(); break;
                 case 4: searchCheapest(); break;
-                case 5: working = false; break;
+                case 5: db.clear(); break;
+                case 6: working = false; db.save(); break;
                 default : {
                     System.out.println("Input out of bounds");
                     System.out.println();

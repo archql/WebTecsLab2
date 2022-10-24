@@ -7,7 +7,6 @@ import java.util.List;
 
 /**
  * class that holds all basic functions of a DB
- * @autor archql
  * @version 1.0
  */
 public interface IDatabase {
@@ -52,4 +51,16 @@ public interface IDatabase {
      * @return list of devices or null if there are no devices to fit in requirements
      */
     List<Device> select(IDeviceFilter f);
+    /**
+     * loads DB from dataFilePath file
+     */
+    void load();
+    /**
+     * saves DB to dataFilePath file
+     */
+    void save();
+    /**
+     * clears db
+     */
+    void clear();
 }

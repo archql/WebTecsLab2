@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_292" class="java.beans.XMLDecoder">
+ <object class="java.util.HashMap">
+  <void method="put">
+   <object class="com.archql.labs.householddevices.Fridge" id="Fridge0">
+    <void class="com.archql.labs.householddevices.Fridge" method="getField">
+     <string>power</string>
+     <void method="set">
+      <object idref="Fridge0"/>
+      <int>100</int>
+     </void>
+    </void>
+    <void class="com.archql.labs.householddevices.Fridge" method="getField">
+     <string>height</string>
+     <void method="set">
+      <object idref="Fridge0"/>
+      <int>100</int>
+     </void>
+    </void>
+    <void class="com.archql.labs.householddevices.Fridge" method="getField">
+     <string>color</string>
+     <void method="set">
+      <object idref="Fridge0"/>
+      <object class="java.lang.Enum" method="valueOf">
+       <class>com.archql.labs.householddevices.Color</class>
+       <string>Red</string>
+      </object>
+     </void>
+    </void>
+    <void class="com.archql.labs.householddevices.Device" method="getField">
+     <string>name</string>
+     <void method="set">
+      <object idref="Fridge0"/>
+      <string>name</string>
+     </void>
+    </void>
+    <void class="com.archql.labs.householddevices.Device" method="getField">
+     <string>manufacturerName</string>
+     <void method="set">
+      <object idref="Fridge0"/>
+      <string>fr</string>
+     </void>
+    </void>
+    <void class="com.archql.labs.householddevices.Device" method="getField">
+     <string>article</string>
+     <void method="set">
+      <object idref="Fridge0"/>
+      <string>321324321432</string>
+     </void>
+    </void>
+    <void class="com.archql.labs.householddevices.Device" method="getField">
+     <string>isOnStall</string>
+     <void method="set">
+      <object idref="Fridge0"/>
+      <boolean>true</boolean>
+     </void>
+    </void>
+    <void class="com.archql.labs.householddevices.Device" method="getField">
+     <string>price</string>
+     <void method="set">
+      <object idref="Fridge0"/>
+      <int>33232</int>
+     </void>
+    </void>
+   </object>
+   <object class="com.archql.labs.DBRecord" id="DBRecord0">
+    <void class="com.archql.labs.DBRecord" method="getField">
+     <string>lastEdited</string>
+     <void method="set">
+      <object idref="DBRecord0"/>
+      <object class="java.sql.Timestamp">
+       <long>1666570597861</long>
+      </object>
+     </void>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

@@ -2,7 +2,6 @@ package com.archql.labs.householddevices;
 
 /**
  * device filter
- * @autor archql
  * @version 1.0
  */
 public interface IDeviceFilter {

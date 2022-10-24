@@ -8,9 +8,8 @@ import java.util.List;
  * class that holds general information of any device in a stock.
  * property <b>quantityBought</b> reflects amount of items being bought
  * property <b>quantity</b> reflects amount of items in stock
- * property <b>lastEdited</b> reflects date & time when the record was edited
+ * property <b>lastEdited</b> reflects date and time when the record was edited
  * property <b>status</b> reflects what type of change was done to the record last
- * @autor archql
  * @version 1.0
  */
 public class DBRecord {
@@ -31,7 +30,7 @@ public class DBRecord {
     /** property <b>quantity</b> reflects amount of items in stock */
     public int quantity = 0;
 
-    /** property <b>lastEdited</b> reflects date & time when the record was edited */
+    /** property <b>lastEdited</b> reflects date and time when the record was edited */
     public Date lastEdited;
 
     /** property <b>status</b> reflects what type of change was done to the record last */
@@ -70,7 +69,7 @@ public class DBRecord {
      * subtracts quantity. sets last edited time.
      * @param quantity - amount to subtract
      * @return amount of items subtracted
-     * if current quantity < quantity then sets SubtractionFailed
+     * if current quantity less than quantity then sets SubtractionFailed
      * if current quantity became 0 then sets OutOfStock
      * otherwise sets QuantitySubtracted
      */
@@ -92,7 +91,7 @@ public class DBRecord {
      * force subtracts quantity. sets last edited time.
      * @param quantity - amount to subtract
      * @return amount of items subtracted
-     * if current quantity < quantity then force subtracts all remaining
+     * if current quantity less than quantity then force subtracts all remaining
      * if current quantity became 0 then sets OutOfStock
      * otherwise sets QuantitySubtracted
      */

@@ -9,6 +9,7 @@ import java.util.Objects;
  * property <b>manufacturerName</b> refers to a company name that produced the item
  * property <b>article</b> refers to a unique code assigned to the item by manufacturer
  * property <b>isOnStall</b> reflects if object is currently can be bought
+ * property <b>price</b> refers to its type
  * @autor archql
  * @version 1.0
  */
@@ -19,7 +20,7 @@ public class Device {
     /** property <b>manufacturerName</b> refers to a company name that produced the item */
     public String manufacturerName;
     /**property <b>article</b> refers to a unique code assigned to the item by manufacturer */
-    public final String article;
+    public String article;
 
     /** property <b>isOnStall</b> reflects if object is currently can be bought */
     public boolean isOnStall = false;
@@ -27,20 +28,29 @@ public class Device {
     /** property <b>price</b> refers to its cost */
     public int price;
 
+    /** property <b>price</b> refers to its type */
+    public final Type type;
+
+    /**
+     * new divece
+     * @see Device#Device(Type, String, String, String, int, boolean)
+     */
+    public Device(Type type) { this.type = type; }
     /**
      * new divece
      * @param name - a product name
      * @param manufacturerName - company name that produced the item
      * @param article - unique code assigned to the item by manufacturer
      * @param price - cost of the single item
-     * @see Device#Device(String, String, String, int, boolean)
+     * @see Device#Device(Type, String, String, String, int, boolean)
      */
-    public Device(String name, String manufacturerName, String article, int price)
+    public Device(Type type, String name, String manufacturerName, String article, int price)
     {
         this.name = name;
         this.manufacturerName = manufacturerName;
         this.article = article;
         this.price = price;
+        this.type = type;
     }
 
     /**
@@ -50,11 +60,11 @@ public class Device {
      * @param article - unique code assigned to the item by manufacturer
      * @param price - cost of the single item
      * @param isOnStall - if object is currently can be bought
-     * @see Device#Device(String, String, String, int)
+     * @see Device#Device(Type, String, String, String, int)
      */
-    public Device(String name, String manufacturerName, String article, int price, boolean isOnStall)
+    public Device(Type type, String name, String manufacturerName, String article, int price, boolean isOnStall)
     {
-        this(name, manufacturerName, article, price);
+        this(type, name, manufacturerName, article, price);
         this.isOnStall = isOnStall;
     }
 
@@ -63,12 +73,12 @@ public class Device {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Device device = (Device) o;
-        return isOnStall == device.isOnStall && price == device.price && Objects.equals(name, device.name) && Objects.equals(manufacturerName, device.manufacturerName) && Objects.equals(article, device.article);
+        return isOnStall == device.isOnStall && price == device.price && Objects.equals(name, device.name) && Objects.equals(manufacturerName, device.manufacturerName) && Objects.equals(article, device.article) && type == device.type;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, manufacturerName, article, isOnStall, price);
+        return Objects.hash(name, manufacturerName, article, isOnStall, price, type);
     }
 
     @Override
@@ -79,6 +89,8 @@ public class Device {
                 ", article='" + article + '\'' +
                 ", isOnStall=" + isOnStall +
                 ", price=" + price +
+                ", type=" + type +
                 '}';
     }
 }
+
